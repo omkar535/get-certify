@@ -1,0 +1,169 @@
+/* General container styling */
+.events-container, .certificates-container {
+  text-align: center;
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+h2 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Center Align Grid Layout */
+.events-list, .certificates-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centers items */
+  gap: 20px;
+  padding: 10px;
+}
+
+/* Event Card Styling */
+.event-card {
+  background: white;
+  color: #333;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 320px; /* Fixed width */
+  height: 150px; /* Increased height */
+  padding: 15px;
+  border-radius: 10px;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 2px solid #ddd;
+}
+
+.event-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Medal Icon */
+.medal-icon {
+  width: 120px; /* Increased size */
+  height: 120px;
+  margin-right: 15px;
+}
+
+/* Event Name Styling */
+.event-name {
+  font-size: 20px; /* Increased font size */
+  font-weight: bold;
+  color: #333;
+}
+
+/* Certificate Card Styling */
+.certificate-card {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  width: 320px; /* Fixed width */
+  height: auto;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+  text-align: center;
+  border: 2px solid #ddd;
+}
+
+.certificate-card:hover {
+  transform: scale(1.03);
+}
+
+.certificate-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Certificate Information */
+.certificate-info {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Certificate Action Buttons */
+.certificate-actions {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+.share-btn, .delete-btn {
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: all 0.2s ease-in-out;
+}
+
+.share-btn {
+  background: #28a745;
+  color: white;
+}
+
+.share-btn:hover {
+  background: #218838;
+}
+
+.delete-btn {
+  background: #dc3545;
+  color: white;
+}
+
+.delete-btn:hover {
+  background: #c82333;
+}
+
+/* Back Button */
+.back-btn {
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 5px;
+  background: #6c757d;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.back-btn:hover {
+  background: #5a6268;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .events-list, .certificates-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .event-card {
+    width: 90%;
+    font-size: 18px;
+    padding: 20px;
+  }
+
+  .medal-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .certificate-info {
+    font-size: 14px;
+  }
+}

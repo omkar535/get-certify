@@ -1,24 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Sidebar from "./Sidebar";
+import Home from "./Home";
+import Generate from "./Generate";
+import GenerateBatch from "./GenerateBatch";
+import Templates from "./Templates";
+import Certificates from "./Certificates";
+import CertificatesByEvent from "./CertificatesByEvent"; // New Component
+import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="app-container">
+        <Sidebar />
+        <div className="content">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/generate" element={<Generate />} />
+            <Route path="/generateBatch" element={<GenerateBatch />} />
+            <Route path="/templates" element={<Templates />} />
+            <Route path="/certificates" element={<Certificates />} />
+            <Route path="/certificates/:eventName" element={<CertificatesByEvent />} />
+          </Routes>
+        </div>
+      </div>
+    </Router>
   );
 }
 
